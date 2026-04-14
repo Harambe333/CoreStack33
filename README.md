@@ -1,4 +1,4 @@
-# 🚀 Project Name
+# 🚀 CoreStack33
 
 A premium, mobile-responsive video membership site designed for high-end digital courses.
 
