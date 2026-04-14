@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="dashboard.html">← Back to Dashboard</a>
+        <div id="lesson-section" class="badge">Section</div>
+    </nav>
+
+    <div class="lesson-layout">
+        <main class="video-content">
+            <h1 id="lesson-title">Loading Lesson...</h1>
+            <div class="video-wrapper">
+                <iframe id="video-frame" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="notes-card">
+                <h3>Lesson Notes</h3>
+                <p id="lesson-notes"></p>
+            </div>
+        </main>
+    </div>
+
+    <script src="lessons.js"></script>
+    <script>
+        // Security Redirect: If not logged in, kick to index
+        if (localStorage.getItem('course_access') !== 'true') {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

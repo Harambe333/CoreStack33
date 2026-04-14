@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-bg">
+    <div class="login-card">
+        <h2>Member Access</h2>
+        <p>Enter your access key to continue.</p>
+        <input type="password" id="passkey" placeholder="Enter Key...">
+        <button class="btn" onclick="checkAuth()">Enter Course</button>
+        <p id="msg" style="color:red; margin-top:10px;"></p>
+    </div>
+
+    <script>
+        function checkAuth() {
+            const key = document.getElementById('passkey').value;
+            if (key === 'YOUR_SECRET_KEY') { // Change this!
+                localStorage.setItem('course_access', 'true');
+                window.location.href = 'dashboard.html';
+            } else {
+                document.getElementById('msg').innerText = "Invalid Access Key";
+            }
+        }
+    </script>
+</body>
+</html>
